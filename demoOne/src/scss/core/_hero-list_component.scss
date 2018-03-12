@@ -1,0 +1,34 @@
+.heroes {
+    @include item-list;
+    .item-container {
+      display: flex;
+      flex-flow: row wrap;
+      button.delete-button {
+        margin-right: 2px;
+        margin-top: 6px;
+        order: 1;
+      }
+      .selectable-item {
+        display: flex;
+        flex-flow: row wrap;
+        flex: 18 auto;
+        order: 0;
+        padding: 0;
+        margin: 0;
+        &:hover {
+          color: #607d8b;
+          color: rgb(0, 120, 215);
+          background-color: #ddd;
+          left: 1px;
+        }
+        &.selected:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .mat-card {
+      @include mat-card-layout;
+  }
+  

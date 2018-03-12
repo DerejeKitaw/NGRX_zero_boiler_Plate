@@ -5,12 +5,17 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { HeroesService } from './heroes.service';
+import { AppSelectors } from '../store/app-config';
 
 @NgModule({
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    SharedModule
   ],
-  declarations: [HeroesComponent, HeroListComponent, HeroDetailComponent]
+  declarations: [HeroesComponent, HeroListComponent, HeroDetailComponent],
+  providers: [ AppSelectors, HeroesService ]
 })
 export class HeroesModule { }
