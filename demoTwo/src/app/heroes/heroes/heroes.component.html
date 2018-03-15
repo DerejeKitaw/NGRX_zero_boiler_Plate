@@ -1,0 +1,8 @@
+<p>
+  heroes works!
+</p>
+<div *ngIf="heroes$ | async as heroes">
+  <li *ngFor="let hero of heroes; trackBy: byId" >
+    {{hero.name}}
+  </li>
+</div>
