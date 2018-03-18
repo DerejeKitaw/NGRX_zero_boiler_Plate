@@ -3,6 +3,8 @@
 </p>
 <div *ngIf="heroes$ | async as heroes">
   <li *ngFor="let hero of heroes; trackBy: byId" >
-    {{hero.name}}
+    {{hero.id}} | 
+    {{hero.name}} | 
+    {{hero.saying}}
   </li>
 </div>
